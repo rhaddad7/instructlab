@@ -18,6 +18,9 @@ RUN pip install instructlab --extra-index-url=https://download.pytorch.org/whl/c
 RUN ilab config init --non-interactive
 RUN ilab model download
 
+# Change ilab configuration
+COPY config.yaml .
+
 ENTRYPOINT ["ilab", "model", "serve"]
 EXPOSE 8000
 
