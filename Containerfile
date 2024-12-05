@@ -20,9 +20,9 @@ RUN ilab model download
 
 # Change ilab configuration
 COPY config.yaml .
-
-ENTRYPOINT ["ilab", "model", "serve"]
 EXPOSE 8000
+ENTRYPOINT ["ilab", "model", "serve"]
+
 
 #ENTRYPOINT ["/bin/sh"]
 #Run the container: podman run -d --name instructlab -p 8000:8000 instructlab:latest ilab model serve
